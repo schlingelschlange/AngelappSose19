@@ -1,0 +1,18 @@
+<app-header></app-header>
+<ion-content>
+    <ion-card class="welcome-card">
+      <ion-img src="../../assets/shapes.svg"></ion-img>
+      <ion-card-header>
+        <ion-card-title>Fang aufnehmen</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button color="primary" expand="full" (click)="openKameraView()">Fang aufnehmen</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-list lines="none" >
+        <ion-item *ngFor="let img of images">
+            <ion-img style="width: 200px; height: 200px;" src="{{img.id}}" (click)="displayImageBig(img.id)"></ion-img>
+          </ion-item>
+        </ion-list>
+</ion-content>
+<app-footer></app-footer>

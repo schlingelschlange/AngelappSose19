@@ -1,0 +1,49 @@
+<ion-header color="color">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        HomePage
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<!-- <ion-content *ngIf="image"> -->
+<ion-content>
+  <ion-img [src]="image"></ion-img>
+  <ion-item>
+    <ion-label position="floating">Koordianten</ion-label>
+    <br>
+    <ion-input>Wird automatisch vom Standort des Smartphones abgerufe</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Temperatur</ion-label>
+    <br>
+    <ion-input>{{temp}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Uhrzeit</ion-label>
+    <br>
+    <ion-input>{{time}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Fischart</ion-label>
+    <br>
+    <ion-input>{{fisch}}</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Größe</ion-label>
+    <br>
+    <ion-input>{{size}}</ion-input>
+  </ion-item>
+  <ion-button color="primary" (click)="openKamera()">Verwerfen</ion-button>
+  <ion-button color="primary" (click)="upload()">Speichern</ion-button>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="primary">
+      <ion-title>Footer</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+  
