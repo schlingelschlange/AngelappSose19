@@ -70,8 +70,6 @@ export class GoogleMapPage implements OnInit {
           });
         }); 
 
-
-
       });
     });
   }

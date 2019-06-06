@@ -68,7 +68,6 @@ export class KameraFachlicheLogikService {
         fisch: fisch,
         size:size,
       });
-
     });
 
     alert("success");

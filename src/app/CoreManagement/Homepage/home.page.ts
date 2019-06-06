@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { KameraFachlicheLogikService } from 'src/app/MainManagement/kamera-fachliche-logik.service';
 import * as firebase from 'firebase';
-import { ModalController, NavController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
 import { ModalPage } from 'src/app/modal/modal.page';
 
 
@@ -36,6 +36,10 @@ export class HomePage implements OnInit {
 
   async openKameraView(){
     this.router.navigateByUrl('/kamera-view');
+  }
+
+  goToMap(){
+    this.router.navigateByUrl('/map');
   }
 
   async displayImageBig(id){
