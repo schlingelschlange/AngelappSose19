@@ -54,8 +54,9 @@ export class KameraFachlicheLogikService {
     let child = 'images/' +  id;
     
 
-    await this.geolocation.getCurrentPosition().then((resp) =>{
-      let userId =  firebase.auth().currentUser.uid;
+    await this.geolocation.getCurrentPosition().then(async (resp) =>{
+      let userId =  await firebase.auth().currentUser.uid;
+      alert("success" + userId);
       let newFischKey = firebase.database().ref().child('fish').push().key;
 
       firebase.database().ref('user/' + userId + '/fish/' + newFischKey).set({
@@ -69,6 +70,8 @@ export class KameraFachlicheLogikService {
       });
 
     });
+
+    alert("success");
 
    
   }

@@ -20,6 +20,10 @@ export class HomePage implements OnInit {
     private router: Router,
     private kameraService: KameraFachlicheLogikService,
     public modalCtrl: ModalController) {
+
+    this.router.events.subscribe((res) =>{
+      this.getImageData();
+    });
  
   }
 
